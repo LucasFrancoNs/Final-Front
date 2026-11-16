@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Raízes Vivas: projeto social que transforma terrenos ociosos em hortas comunitárias, gerando alimento, renda e convivência.">
+  <title>Raízes Vivas | Hortas Comunitárias</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+
+  <!-- Bootstrap 5, Bootstrap Icons e Google Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#menu-principal" data-bs-offset="90" tabindex="0">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="menu-principal">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+        <img src="img/logo.svg" alt="" width="36" height="36">
+        <span>Raízes Vivas</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks"
+              aria-controls="navLinks" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLinks">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#impacto">Impacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+          <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+          <li class="nav-item ms-lg-2">
+            <button id="btn-tema" class="btn btn-sm btn-outline-secondary rounded-circle" type="button"
+                    aria-label="Alternar modo claro/escuro"><i class="bi bi-moon-stars-fill"></i></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section id="inicio" class="hero d-flex align-items-center">
+      <div class="container text-center text-lg-start">
+        <div class="row align-items-center">
+          <div class="col-lg-7 reveal">
+            <span class="badge selo mb-3"><i class="bi bi-flower1 me-1"></i> Projeto social · desde 2019</span>
+            <h1 class="display-4 fw-bold">Do terreno vazio à <span class="destaque">mesa de quem precisa</span></h1>
+            <p class="lead mt-3">Transformamos espaços ociosos em hortas comunitárias que geram alimento saudável, renda extra e vínculos entre vizinhos.</p>
+            <div class="d-flex flex-column flex-sm-row gap-3 mt-4 justify-content-center justify-content-lg-start">
+              <a href="#contato" class="btn btn-verde btn-lg">Quero ser voluntário</a>
+              <a href="#sobre" class="btn btn-outline-light btn-lg">Conheça o projeto</a>
+            </div>
+          </div>
+          <div class="col-lg-5 d-none d-lg-block text-center reveal">
+            <img class="hero-foto" src="https://commons.wikimedia.org/wiki/Special:FilePath/Temescal_Community_Garden.jpg?width=900" width="900" height="675" alt="Horta comunitária com canteiros de verduras e hortelões trabalhando">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SOBRE ===== -->
+    <section id="sobre" class="py-5">
+      <div class="container py-4">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6 reveal">
+            <h2 class="titulo-secao">Quem somos</h2>
+            <p>O <strong>Raízes Vivas</strong> é uma iniciativa comunitária que reúne moradores, voluntários e pequenos produtores para cultivar hortas em terrenos que estavam abandonados.</p>
+            <p>Tudo o que é colhido é dividido entre as famílias participantes, e o excedente é vendido em feiras do bairro, com a renda revertida para o próprio projeto.</p>
+            <div class="row g-3 mt-2">
+              <div class="col-sm-4"><div class="mini-card"><i class="bi bi-bullseye"></i><h3>Missão</h3><p>Garantir alimento saudável com participação da comunidade.</p></div></div>
+              <div class="col-sm-4"><div class="mini-card"><i class="bi bi-eye"></i><h3>Visão</h3><p>Uma horta em cada bairro, cuidada por quem mora nele.</p></div></div>
+              <div class="col-sm-4"><div class="mini-card"><i class="bi bi-heart"></i><h3>Valores</h3><p>Cooperação, sustentabilidade e respeito.</p></div></div>
+            </div>
+          </div>
+          <div class="col-lg-6 reveal">
+            <h3 class="h4 mb-3">Perguntas frequentes</h3>
+            <div class="accordion" id="faq">
+              <div class="accordion-item">
+                <h4 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">Preciso ter experiência para participar?</button></h4>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faq"><div class="accordion-body">Não. Começamos com uma oficina prática e você aprende junto com a equipe.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">Quanto tempo preciso dedicar?</button></h4>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Você escolhe: de 2 horas por semana a mutirões mensais aos sábados.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">Posso doar insumos ou ferramentas?</button></h4>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Sim! Sementes, mudas, adubo e ferramentas são sempre bem-vindos. Fale conosco pelo formulário.</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== IMPACTO (contadores) ===== -->
+    <section id="impacto" class="py-5 faixa-contadores">
+      <div class="container py-3">
+        <div class="row text-center g-4">
+          <div class="col-6 col-md-3"><div class="numero" data-meta="12">0</div><div>hortas ativas</div></div>
+          <div class="col-6 col-md-3"><div class="numero" data-meta="340">0</div><div>famílias atendidas</div></div>
+          <div class="col-6 col-md-3"><div class="numero" data-meta="48">0</div><div>toneladas colhidas</div></div>
+          <div class="col-6 col-md-3"><div class="numero" data-meta="120">0</div><div>voluntários</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== AÇÕES (cards) ===== -->
+    <section id="acoes" class="py-5">
+      <div class="container py-4">
+        <h2 class="titulo-secao text-center">O que fazemos</h2>
+        <p class="text-center text-secondary mb-5">Quatro frentes de trabalho que sustentam o projeto.</p>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3 reveal"><div class="card h-100 card-acao"><div class="card-body"><i class="bi bi-basket2-fill icone-card"></i><h3 class="card-title h5">Hortas comunitárias</h3><p class="card-text">Implantamos e mantemos hortas coletivas com técnicas agroecológicas.</p></div></div></div>
+          <div class="col-md-6 col-lg-3 reveal"><div class="card h-100 card-acao"><div class="card-body"><i class="bi bi-mortarboard-fill icone-card"></i><h3 class="card-title h5">Oficinas</h3><p class="card-text">Cursos gratuitos de cultivo, compostagem e alimentação saudável.</p></div></div></div>
+          <div class="col-md-6 col-lg-3 reveal"><div class="card h-100 card-acao"><div class="card-body"><i class="bi bi-shop icone-card"></i><h3 class="card-title h5">Feira solidária</h3><p class="card-text">Venda direta do excedente, gerando renda para as famílias.</p></div></div></div>
+          <div class="col-md-6 col-lg-3 reveal"><div class="card h-100 card-acao"><div class="card-body"><i class="bi bi-recycle icone-card"></i><h3 class="card-title h5">Compostagem</h3><p class="card-text">Transformamos resíduos orgânicos em adubo para as hortas.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GALERIA COM FILTRO ===== -->
+    <section id="galeria" class="py-5 bg-secao">
+      <div class="container py-4">
+        <h2 class="titulo-secao text-center">Galeria de atividades</h2>
+        <div class="d-flex flex-wrap justify-content-center gap-2 my-4" id="filtros" role="group" aria-label="Filtrar galeria">
+          <button class="btn btn-sm btn-verde active" data-filtro="todos">Todos</button>
+          <button class="btn btn-sm btn-outline-success" data-filtro="plantio">Plantio</button>
+          <button class="btn btn-sm btn-outline-success" data-filtro="oficinas">Oficinas</button>
+          <button class="btn btn-sm btn-outline-success" data-filtro="feira">Feira</button>
+        </div>
+        <div class="row g-3" id="galeria-itens">
+          <div class="col-6 col-lg-3 item-galeria" data-categoria="plantio"><button class="tile tile-foto" style="--foto:url('https://commons.wikimedia.org/wiki/Special:FilePath/20170405-AMS-LSC-1971_(33893494205).jpg?width=700')" data-imagem="https://commons.wikimedia.org/wiki/Special:FilePath/20170405-AMS-LSC-1971_(33893494205).jpg?width=1000" data-bs-toggle="modal" data-bs-target="#modalFoto" data-titulo="Mutirão de plantio" data-texto="Voluntários preparando os canteiros em um sábado de mutirão."><i class="bi bi-flower2"></i><span>Mutirão de plantio</span></button></div>
+          <div class="col-6 col-lg-3 item-galeria" data-categoria="oficinas"><button class="tile t2" data-bs-toggle="modal" data-bs-target="#modalFoto" data-titulo="Oficina de compostagem" data-texto="Moradores aprendem a transformar restos de comida em adubo."><i class="bi bi-recycle"></i><span>Oficina de compostagem</span></button></div>
+          <div class="col-6 col-lg-3 item-galeria" data-categoria="feira"><button class="tile tile-foto" style="--foto:url('https://commons.wikimedia.org/wiki/Special:FilePath/Fresh_From_the_Market_(Unsplash).jpg?width=700')" data-imagem="https://commons.wikimedia.org/wiki/Special:FilePath/Fresh_From_the_Market_(Unsplash).jpg?width=1000" data-bs-toggle="modal" data-bs-target="#modalFoto" data-titulo="Feira solidária" data-texto="Barraca com hortaliças colhidas na semana, vendidas a preço justo."><i class="bi bi-basket3"></i><span>Feira solidária</span></button></div>
+          <div class="col-6 col-lg-3 item-galeria" data-categoria="plantio"><button class="tile t4" data-bs-toggle="modal" data-bs-target="#modalFoto" data-titulo="Colheita coletiva" data-texto="A colheita é dividida entre todas as famílias participantes."><i class="bi bi-brightness-high"></i><span>Colheita coletiva</span></button></div>
+          <div class="col-6 col-lg-3 item-galeria" data-categoria="oficinas"><button class="tile t5" data-bs-toggle="modal" data-bs-target="#modalFoto" data-titulo="Horta na escola" data-texto="Crianças aprendem sobre alimentação cultivando a própria horta."><i class="bi bi-book"></i><span>Horta na escola</span></button></div>
+          <div class="col-6 col-lg-3 item-galeria" data-categoria="feira"><button class="tile t6" data-bs-toggle="modal" data-bs-target="#modalFoto" data-titulo="Cestas de verduras" data-texto="Cestas semanais montadas pelos próprios hortelões."><i class="bi bi-bag-heart"></i><span>Cestas de verduras</span></button></div>
+          <div class="col-6 col-lg-3 item-galeria" data-categoria="plantio"><button class="tile tile-foto" style="--foto:url('https://commons.wikimedia.org/wiki/Special:FilePath/Temescal_Community_Garden.jpg?width=700')" data-imagem="https://commons.wikimedia.org/wiki/Special:FilePath/Temescal_Community_Garden.jpg?width=1000" data-bs-toggle="modal" data-bs-target="#modalFoto" data-titulo="Viveiro de mudas" data-texto="Mudas produzidas no viveiro comunitário abastecem todas as hortas."><i class="bi bi-tree"></i><span>Viveiro de mudas</span></button></div>
+          <div class="col-6 col-lg-3 item-galeria" data-categoria="oficinas"><button class="tile t8" data-bs-toggle="modal" data-bs-target="#modalFoto" data-titulo="Culinária saudável" data-texto="Oficina de receitas com os alimentos colhidos nas hortas."><i class="bi bi-egg-fried"></i><span>Culinária saudável</span></button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DEPOIMENTOS (carousel) ===== -->
+    <section id="depoimentos" class="py-5">
+      <div class="container py-4">
+        <h2 class="titulo-secao text-center mb-4">Quem faz parte conta</h2>
+        <div id="carrosselDepo" class="carousel slide mx-auto" style="max-width:720px" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carrosselDepo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Depoimento 1"></button>
+            <button type="button" data-bs-target="#carrosselDepo" data-bs-slide-to="1" aria-label="Depoimento 2"></button>
+            <button type="button" data-bs-target="#carrosselDepo" data-bs-slide-to="2" aria-label="Depoimento 3"></button>
+          </div>
+          <div class="carousel-inner pb-5">
+            <div class="carousel-item active"><blockquote class="depoimento"><p>“Hoje minha família come verdura fresca todo dia, e ainda consigo vender o que sobra na feira.”</p><footer>Maria das Graças, hortelã desde 2020</footer></blockquote></div>
+            <div class="carousel-item"><blockquote class="depoimento"><p>“Comecei como voluntário num sábado e hoje coordeno uma das hortas. Mudou minha relação com o bairro.”</p><footer>Rafael, coordenador de horta</footer></blockquote></div>
+            <div class="carousel-item"><blockquote class="depoimento"><p>“Meus alunos adoram a horta da escola. Aprendem ciências na prática e comem o que plantam.”</p><footer>Profª Helena, escola parceira</footer></blockquote></div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carrosselDepo" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Anterior</span></button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carrosselDepo" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Próximo</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTATO ===== -->
+    <section id="contato" class="py-5 bg-secao">
+      <div class="container py-4">
+        <div class="row g-5">
+          <div class="col-lg-5">
+            <h2 class="titulo-secao">Fale com a gente</h2>
+            <p>Quer ser voluntário, doar insumos ou levar uma horta para o seu bairro? Preencha o formulário e responderemos em até 2 dias úteis.</p>
+            <ul class="list-unstyled contato-info">
+              <li><i class="bi bi-geo-alt-fill"></i> Rua das Hortênsias, 123, Centro</li>
+              <li><i class="bi bi-envelope-fill"></i> contato@raizesvivas.org</li>
+              <li><i class="bi bi-telephone-fill"></i> (11) 90000-0000</li>
+            </ul>
+          </div>
+          <div class="col-lg-7">
+            <form id="form-contato" class="card p-4 shadow-sm" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="nome" class="form-label">Nome</label>
+                  <input type="text" class="form-control" id="nome" name="nome" autocomplete="name" required minlength="3">
+                  <div class="invalid-feedback">Informe seu nome (mínimo 3 letras).</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">E-mail</label>
+                  <input type="email" class="form-control" id="email" name="email" autocomplete="email" required>
+                  <div class="invalid-feedback">Informe um e-mail válido.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="telefone" class="form-label">Telefone</label>
+                  <input type="tel" class="form-control" id="telefone" name="telefone" autocomplete="tel" placeholder="(11) 90000-0000" required>
+                  <div class="invalid-feedback">Informe um telefone com DDD.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="assunto" class="form-label">Assunto</label>
+                  <select class="form-select" id="assunto" name="assunto" required>
+                    <option value="">Selecione...</option>
+                    <option>Quero ser voluntário</option>
+                    <option>Quero doar</option>
+                    <option>Quero uma horta no meu bairro</option>
+                    <option>Outro assunto</option>
+                  </select>
+                  <div class="invalid-feedback">Escolha um assunto.</div>
+                </div>
+                <div class="col-12">
+                  <label for="mensagem" class="form-label">Mensagem</label>
+                  <textarea class="form-control" id="mensagem" name="mensagem" rows="4" required minlength="10"></textarea>
+                  <div class="invalid-feedback">Escreva uma mensagem (mínimo 10 caracteres).</div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-verde btn-lg w-100" id="btn-enviar">Enviar mensagem</button>
+                </div>
+                <div class="col-12"><div id="feedback-form" role="status" aria-live="polite"></div></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer class="py-4 rodape">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <small>&copy; <span id="ano">2026</span> Raízes Vivas. Todos os direitos reservados.</small>
+      <div class="redes fs-4">
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="container mt-3 pt-3 border-top border-light border-opacity-25">
+      <small class="creditos">Fotos via Wikimedia Commons: Mx. Granger (Temescal Community Garden, CC0), USDA / Lance Cheung (domínio público) e Anne Preble (Unsplash, CC0). Ilustrativas.</small>
+    </div>
+  </footer>
+
+  <button id="btn-topo" class="btn btn-verde rounded-circle" aria-label="Voltar ao topo"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- Modal da galeria -->
+  <div class="modal fade" id="modalFoto" tabindex="-1" aria-labelledby="modalFotoTitulo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header"><h5 class="modal-title" id="modalFotoTitulo"></h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div>
+        <div class="modal-body"><img id="modalFotoImg" class="img-fluid rounded mb-3 d-none" alt=""><p id="modalFotoTexto" class="mb-0"></p></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

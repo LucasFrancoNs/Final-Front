@@ -1,0 +1,139 @@
+/* ===== Variáveis e tema ===== */
+:root {
+  --verde: #2e7d4f;
+  --verde-escuro: #1b4d30;
+  --verde-claro: #e8f3ec;
+  --terra: #c9792b;
+  --fundo-secao: #f4f8f5;
+  --fonte-titulo: 'Fraunces', Georgia, serif;
+  --fonte-texto: 'Nunito', system-ui, sans-serif;
+}
+
+[data-bs-theme="dark"] {
+  --fundo-secao: #1c2420;
+  --verde-claro: #25342b;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+body { font-family: var(--fonte-texto); }
+h1, h2, h3, h4, h5, .navbar-brand { font-family: var(--fonte-titulo); }
+
+/* ===== Navbar ===== */
+.navbar {
+  background: rgba(255, 255, 255, .92);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, .08);
+}
+[data-bs-theme="dark"] .navbar { background: rgba(26, 32, 29, .92); }
+.navbar-brand { font-weight: 700; color: var(--verde) !important; }
+.navbar .nav-link { font-weight: 600; border-radius: .5rem; }
+.navbar .nav-link.active, .navbar .nav-link:hover { color: var(--verde) !important; }
+
+/* ===== Botões ===== */
+.btn-verde {
+  background: var(--verde); color: #fff; border: 2px solid var(--verde); font-weight: 700;
+}
+.btn-verde:hover, .btn-verde.active { background: var(--verde-escuro); border-color: var(--verde-escuro); color: #fff; }
+.btn-outline-success { --bs-btn-color: var(--verde); --bs-btn-border-color: var(--verde); --bs-btn-hover-bg: var(--verde); --bs-btn-hover-border-color: var(--verde); }
+
+/* ===== Hero ===== */
+.hero {
+  min-height: 100vh;
+  padding: 110px 0 60px;
+  color: #fff;
+  background:
+    linear-gradient(135deg, rgba(27, 77, 48, .92) 0%, rgba(46, 125, 79, .82) 60%, rgba(95, 163, 111, .70) 100%),
+    url("https://commons.wikimedia.org/wiki/Special:FilePath/20170405-AMS-LSC-1971_(33893494205).jpg?width=1600") center / cover no-repeat,
+    #1b4d30;
+}
+.hero .destaque { color: #ffd88a; }
+.selo { background: rgba(255, 255, 255, .18); font-weight: 600; padding: .55rem .9rem; font-size: .9rem; }
+.hero-foto {
+  width: 100%; height: auto; border-radius: 1.5rem; border: 6px solid rgba(255, 255, 255, .9);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .35); transform: rotate(2deg); object-fit: cover;
+}
+.hero-icone { font-size: 16rem; color: rgba(255, 255, 255, .25); animation: balanco 6s ease-in-out infinite; }
+@keyframes balanco { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg) translateY(-8px); } }
+
+/* ===== Seções ===== */
+.titulo-secao { font-weight: 700; color: var(--verde); margin-bottom: 1rem; }
+[data-bs-theme="dark"] .titulo-secao { color: #7fcf9b; }
+.bg-secao { background: var(--fundo-secao); }
+
+.mini-card {
+  background: var(--verde-claro); border-radius: .9rem; padding: 1rem; height: 100%;
+}
+.mini-card i { font-size: 1.6rem; color: var(--verde); }
+.mini-card h3 { font-size: 1.05rem; margin: .4rem 0 .25rem; }
+.mini-card p { font-size: .85rem; margin: 0; }
+
+.accordion-button:not(.collapsed) { background: var(--verde-claro); color: var(--verde-escuro); }
+[data-bs-theme="dark"] .accordion-button:not(.collapsed) { color: #bfe8cd; }
+.accordion-button:focus { box-shadow: 0 0 0 .2rem rgba(46, 125, 79, .25); }
+
+/* ===== Contadores ===== */
+.faixa-contadores { background: var(--verde-escuro); color: #fff; }
+.numero { font-family: var(--fonte-titulo); font-size: 3rem; font-weight: 700; color: #ffd88a; }
+.numero::before { content: '+'; font-size: 1.6rem; vertical-align: super; opacity: .8; }
+
+/* ===== Cards de ações ===== */
+.card-acao { border: 0; box-shadow: 0 4px 14px rgba(0, 0, 0, .08); transition: transform .25s, box-shadow .25s; }
+.card-acao:hover { transform: translateY(-6px); box-shadow: 0 10px 24px rgba(0, 0, 0, .14); }
+.icone-card { font-size: 2.4rem; color: var(--terra); display: block; margin-bottom: .6rem; }
+
+/* ===== Galeria ===== */
+.tile {
+  width: 100%; aspect-ratio: 1 / 1; border: 0; border-radius: 1rem; color: #fff;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .5rem;
+  font-weight: 700; padding: .75rem; text-align: center; cursor: pointer;
+  transition: transform .25s, filter .25s;
+}
+.tile i { font-size: 2.6rem; }
+.tile:hover { transform: scale(1.04); filter: brightness(1.08); }
+.tile-foto {
+  background: linear-gradient(rgba(0, 0, 0, .05), rgba(0, 0, 0, .65)), var(--foto) center / cover no-repeat;
+  justify-content: flex-end; text-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+}
+.creditos { opacity: .75; font-size: .78rem; }
+.t1 { background: linear-gradient(135deg, #2e7d4f, #5fa36f); }
+.t2 { background: linear-gradient(135deg, #a8642a, #d79a5b); }
+.t3 { background: linear-gradient(135deg, #c0452f, #e68a6b); }
+.t4 { background: linear-gradient(135deg, #b88a1a, #e6c04f); }
+.t5 { background: linear-gradient(135deg, #2b6f8f, #5fb0cf); }
+.t6 { background: linear-gradient(135deg, #8a3f7a, #c97bb8); }
+.t7 { background: linear-gradient(135deg, #1b4d30, #3e8f5c); }
+.t8 { background: linear-gradient(135deg, #b5532a, #e59a5c); }
+.item-galeria { transition: opacity .3s, transform .3s; }
+.item-galeria.oculto { display: none; }
+
+/* ===== Depoimentos ===== */
+.depoimento { text-align: center; padding: 1rem 3rem; margin: 0; }
+.depoimento p { font-family: var(--fonte-titulo); font-size: 1.25rem; }
+.depoimento footer { color: var(--terra); font-weight: 700; }
+.carousel-indicators [data-bs-target] { background-color: var(--verde); }
+.carousel-control-prev-icon, .carousel-control-next-icon { filter: invert(.5); }
+
+/* ===== Contato ===== */
+.contato-info li { margin-bottom: .75rem; }
+.contato-info i { color: var(--verde); margin-right: .6rem; }
+.form-control:focus, .form-select:focus { border-color: var(--verde); box-shadow: 0 0 0 .2rem rgba(46, 125, 79, .2); }
+
+/* ===== Rodapé e botão topo ===== */
+.rodape { background: var(--verde-escuro); color: #e6f2ea; }
+.redes a { color: #e6f2ea; margin-left: .8rem; transition: color .2s; }
+.redes a:hover { color: #ffd88a; }
+#btn-topo {
+  position: fixed; right: 1.2rem; bottom: 1.2rem; width: 46px; height: 46px; z-index: 1030;
+  opacity: 0; visibility: hidden; transition: opacity .3s, visibility .3s;
+}
+#btn-topo.visivel { opacity: 1; visibility: visible; }
+
+/* ===== Animação de rolagem ===== */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visivel { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .hero-icone { animation: none; }
+}
